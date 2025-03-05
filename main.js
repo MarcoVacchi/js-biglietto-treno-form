@@ -43,9 +43,29 @@ const btnElement = document.getElementById("output");
 btnElement.addEventListener('click', function() {
 let kmElementValue = parseInt(kmElement.value);
 let ageElementValue = parseInt(ageElement.value);
+const priceForKm = 0.21;
+let totalPrice = kmElementValue * priceForKm;
 
 
+// Verifica se kmElementValue non sia un numero
 
+if (isNaN(kmElementValue) || kmElementValue === '' || kmElementValue <= 0 ) {
+    alert( 'Please, insert a valid number for the km, not a word, negative number or a space!' );
+} 
+
+    // Verifica se ageElementValue non è un numero
+if (isNaN(ageElementValue) || ageElementValue === '' || ageElementValue <= 0 ) {
+    alert( 'Please, insert a valid number for the age, not a word, negative number or a space!' );
+    } else {
+        // Controlla l'età e applica lo sconto
+        if (ageElementValue <= 18) {
+            totalPrice = totalPrice - (totalPrice * 20) / 100; // applico lo sconto del 20% per -18
+        } else if (ageElementValue >= 65) {
+            totalPrice = totalPrice - (totalPrice * 40) / 100; // applico lo sconto del 40% per gli over 65
+        }
+        // applico il prezzo finale in forma umana con massimo 2 decimali (per indicare i centesimi)
+        console.log("Great! The price is: €" + totalPrice.toFixed(2));
+    }
 
 })
 
