@@ -12,12 +12,12 @@
 <div class="container t-center">
     <h2 class="text-light text-center p-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
     <form class="" id="my-form">
-        <div class="container text-center bg-light ">
+        <div class="container text-center bg-light">
 
             <div class="row align-items-start">
             <div class="col">
                 <p class="text-danger p-1 text-center">Nome e cognome</p>
-                <input type = "text" id="name-user"class="border border-danger rounded-3 text-center" placeholder="Nome e cognome">
+                <input type = "text"class="border border-danger rounded-3 text-center" id="name-user" placeholder="Nome e cognome">
             </div>
             <div class="col">
                 <p class="text-danger p-1 text-center">Km da percorrere</p>
@@ -44,33 +44,38 @@
         </form>
     -->
     </div>
-
+    <!--
+    style="display: none;"
+    -->
 </div>
-<form class="" id="my-form-2" style="display: none;">
+<form id="my-form-2" style="display: none">
     <h2 class="text-light text-center p-3">IL TUO BIGLIETTO</h2>
-    <div class="container t-center bg-light">
+    <div class="container t-center bg-light hei-container pb-3">
         <h4>DETTAGLIO PASSEGGERI</h4>
-        <div class="container text-center">
+        <div class="container">
             <div class="row align-items-start">
-            <div class="col fw-bold">
-            NOME PASSEGGERO
-            <div class="fw-bold">ciao</div>
+                <div class="col fw-bold bg-secondary mb-4 border border-secondary">
+                <div class="mb-4 p-3">NOME PASSEGGERO</div>
+                <div class="fw-bold p-3" id="name-user-element-output"></div>
             </div>
-            <div class="col">
-                One of three columns
+            <div class="col fw-bold border border-secondary">
+                <div class=" mb-4 p-3">Offerta</div>
+                <div class="fw-normal p-3">Biglietto standard</div>
             </div>
-            <div class="col">
-                One of three columns
+            <div class="col fw-bold border border-secondary">
+                <div class=" mb-4 p-3">Carrozza</div>
+                <div class="fw-normal p-3">5</div>
             </div>
-            <div class="col">
-                One of three columns
+            <div class="col fw-bold border border-secondary">
+                <div class=" mb-4 p-3">Codice cp</div>
+                <div class="fw-normal p-3">92911</div>
             </div>
-            <div class="col">
-                One of three columns
+            <div class="col fw-bold border border-secondary">
+                <div class=" mb-4 p-3">Costo Biglietto</div>
+                <div id="total-price-for-user" class="fw-normal p-3"></div>
             </div>
             </div>
         </div>
-        <div id="total-price-for-user"></div>
     </div>
 
 </form>
