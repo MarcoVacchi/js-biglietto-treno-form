@@ -73,7 +73,7 @@ formElement.addEventListener('submit', function(event) {
                 totalPrice = totalPrice - (totalPrice * 40) / 100; // applico lo sconto del 40% per gli over 65
             }
             // applico il prezzo finale in forma umana con massimo 2 decimali (per indicare i centesimi)
-            totalPriceForUser = document.getElementById("total-price-for-user").innerHTML = ` ${totalPrice.toFixed(2)}`;
+            totalPriceForUser = document.getElementById("total-price-for-user").innerHTML = ` ${totalPrice.toFixed(2)} €`;
             nameUserElementOutput = document.getElementById("name-user-element-output").innerHTML = `${nameUserElementValue}`;
                                                
     }
