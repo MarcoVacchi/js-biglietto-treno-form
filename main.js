@@ -40,9 +40,11 @@ const ageElement = document.getElementById("age-user");
 const btnElement = document.getElementById("output");
 const formElement = document.getElementById("my-form");
 const nameUser = document.getElementById("name-user");
+const myForm2Value = document.getElementById("my-form-2");
 
 formElement.addEventListener('submit', function(event) {
     event.preventDefault();
+    myForm2Value.style.display = "inline";
     let kmElementValue = parseInt(kmElement.value);
     let ageElementValue = parseInt(ageElement.value); 
     let priceForKm = 0.21;
