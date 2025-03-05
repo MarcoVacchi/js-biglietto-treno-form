@@ -39,13 +39,16 @@ const kmElement = document.getElementById("km");
 const ageElement = document.getElementById("age-user");
 const btnElement = document.getElementById("output");
 const formElement = document.getElementById("my-form");
+const nameUser = document.getElementById("name-user");
 
 formElement.addEventListener('submit', function(event) {
     event.preventDefault();
     let kmElementValue = parseInt(kmElement.value);
-    let ageElementValue = parseInt(ageElement.value);
+    let ageElementValue = parseInt(ageElement.value); 
     let priceForKm = 0.21;
     let totalPrice = kmElementValue * priceForKm;
+    let nameUserValue = (nameUser.value);
+
     //let totalPriceForUser = document.getElementById("total-price-for-user")
 
     // Verifica se kmElementValue non sia un numero
@@ -65,7 +68,8 @@ formElement.addEventListener('submit', function(event) {
                 totalPrice = totalPrice - (totalPrice * 40) / 100; // applico lo sconto del 40% per gli over 65
             }
             // applico il prezzo finale in forma umana con massimo 2 decimali (per indicare i centesimi)
-            totalPriceForUser = document.getElementById("total-price-for-user").innerHTML = "Great! The price is: €" + totalPrice.toFixed(2);
+            totalPriceForUser = document.getElementById("total-price-for-user").innerHTML = `NOME PASSEGGERO ${nameUserValue} ${totalPrice.toFixed(2)}`;
+           
     }
 })
 
