@@ -35,7 +35,7 @@ in ogni caso cercate di farla vostra.
 Buona giornata, buon lavoro :saluto_vulcaniano: */
 
 
-const kmElement = document.getElementById("km");
+const kmElement = document.getElementById("km'user");
 const ageElement = document.getElementById("age-user");
 const btnElement = document.getElementById("output");
 const formElement = document.getElementById("my-form");
